@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#141812">
+    <meta name="description" content="Calculadora de cuatro operaciones con estética pixel art.">
+    <title>Pixel Calc</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="workspace">
+      <section class="calculator" aria-label="Calculadora Pixel Calc">
+        <header class="topbar">
+          <div class="brand">
+            <canvas class="brand__sprite" id="brand-sprite" width="8" height="8" aria-hidden="true"></canvas>
+            <div>
+              <p class="brand__name">PIXEL CALC</p>
+              <p class="brand__edition">ARCADE SERIES <span>NO. 08</span></p>
+            </div>
+          </div>
+          <div class="power" aria-label="API conectada">
+            <span class="power__led" aria-hidden="true"></span>
+            <span>ONLINE</span>
+          </div>
+        </header>
+
+        <div class="screen" aria-live="polite" aria-atomic="true">
+          <div class="screen__meta">
+            <span id="expression">LISTA PARA CALCULAR</span>
+            <span class="screen__mode">DEC</span>
+          </div>
+          <output class="screen__value" id="display" aria-label="Resultado">0</output>
+          <p class="screen__message" id="message" role="status">API DE OPERACIONES CONECTADA</p>
+        </div>
+
+        <div class="keypad" aria-label="Teclado de la calculadora">
+          <button class="key key--utility" data-action="clear" aria-label="Borrar todo">AC</button>
+          <button class="key key--utility" data-action="sign" aria-label="Cambiar signo">+/-</button>
+          <button class="key key--utility" data-action="backspace" aria-label="Borrar último dígito">DEL</button>
+          <button class="key key--operator" data-action="operator" data-value="/" aria-label="Dividir">÷</button>
+
+          <button class="key" data-action="digit" data-value="7">7</button>
+          <button class="key" data-action="digit" data-value="8">8</button>
+          <button class="key" data-action="digit" data-value="9">9</button>
+          <button class="key key--operator" data-action="operator" data-value="*" aria-label="Multiplicar">×</button>
+
+          <button class="key" data-action="digit" data-value="4">4</button>
+          <button class="key" data-action="digit" data-value="5">5</button>
+          <button class="key" data-action="digit" data-value="6">6</button>
+          <button class="key key--operator" data-action="operator" data-value="-" aria-label="Restar">−</button>
+
+          <button class="key" data-action="digit" data-value="1">1</button>
+          <button class="key" data-action="digit" data-value="2">2</button>
+          <button class="key" data-action="digit" data-value="3">3</button>
+          <button class="key key--operator" data-action="operator" data-value="+" aria-label="Sumar">+</button>
+
+          <button class="key key--wide" data-action="digit" data-value="0">0</button>
+          <button class="key" data-action="decimal" aria-label="Punto decimal">.</button>
+          <button class="key key--equals" data-action="equals" aria-label="Calcular resultado">=</button>
+        </div>
+
+        <footer class="footer">
+          <span>FOUR FUNCTIONS. ZERO DRAMA.</span>
+          <span class="footer__keys">KEYBOARD READY <span aria-hidden="true">↵</span></span>
+        </footer>
+      </section>
+      <p class="workspace__caption">BUILT FOR THE BASICS <span>·</span> EST. 2026</p>
+    </main>
+  </body>
+</html>
